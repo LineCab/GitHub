@@ -22,3 +22,31 @@
     font-weight: 500;
     line-height: normal;
 }
+
+.planetes{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(25, 40px);
+    grid-template-rows: repeat(15, 20px);
+    margin: 20px auto;
+}
+
+.planete1{
+    grid-area: 2 / 1 / 3 / 1;
+    width: 160px;
+}
+
+.planete2{
+    grid-area: 10 / 8 / 11 / 8;
+    width: 100px;
+}
+
+.planete3{
+    grid-area: 4 / 15 / 4 / 15;
+    width: 140px;
+}
+
+.planete4{
+    grid-area: 6 / 22 / 6 / 22;
+    width: 170px;
+}
