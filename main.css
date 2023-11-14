@@ -1,0 +1,15 @@
+body{
+    height: 100%;
+    width: 99%;
+    background: url(img/background.svg);
+    background-position: contain;
+}
+h1{
+    text-align: center;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(20);
+} 
