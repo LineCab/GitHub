@@ -26,8 +26,8 @@
 .planetes{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(25, 40px);
-    grid-template-rows: repeat(15, 20px);
+    grid-template-columns: repeat(25, 3vw);
+    grid-template-rows: repeat(15, 2vw);
     margin: 20px auto;
 }
 
