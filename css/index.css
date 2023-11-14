@@ -1,0 +1,24 @@
+.galaxy{
+    background-image: url('../assets/image/fond.svg');
+    width: 100vw;
+    height: 100vh;
+}
+
+.box-text{
+    width: 70vw;
+    height: 220px;
+    padding: 35px;
+    border-radius: 29px;
+    border: 1px solid rgba(255, 255, 255, 0.60);
+    background: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(7px);
+}
+
+.title-galaxy{
+    color: #FFF;
+    font-family: Lexend;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
