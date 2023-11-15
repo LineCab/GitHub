@@ -154,8 +154,8 @@ a{
 
 /* Add these styles at the end of your existing CSS */
 
-.main {
-    overflow: hidden;
+main {
+    overflow-x: hidden;
 }
 
 .galaxy {
