@@ -194,6 +194,16 @@ a{
     background-color: #DCDDE1;
 }
 
+.audio{
+    position: fixed;
+    right: 5vw;
+    top: 64px;
+
+}
+.audio svg path{
+    fill: #FFF;
+}
+
 @media screen and (min-width: 801px) and (max-width: 1000px){
 
     .planetes {
