@@ -200,7 +200,8 @@ a{
 }
 
 .audio{
-    position: fixed;
+    display: flex;
+    position: absolute;
     right: 5vw;
     top: 64px;
 

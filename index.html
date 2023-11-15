@@ -10,12 +10,14 @@
 </head>
 <body>
     <main>
-        <audio id="backgroundAudio" autoplay loop controls  style="display:none">
-            <source src="/assets/son/ambiance.mp3" type="audio/mp3">
-            Votre navigateur ne supporte pas l'élément audio.
-        </audio>
+        <div class="audio-container">
+            <audio id="backgroundAudio" autoplay loop controls  style="display:none">
+                <source src="/assets/son/ambiance.mp3" type="audio/mp3">
+                Votre navigateur ne supporte pas l'élément audio.
+            </audio>
 
-        <button id="toggleSoundButton" class="audio">On</button>
+            <button id="toggleSoundButton" class="audio">On</button>
+        </div>
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
@@ -115,6 +117,7 @@
         </div>
     </main>
     <script>
+        
         const galaxyContainer = document.getElementById('galaxyContainer');
         const bulletsContainer = document.querySelector('.bullet');
         const bullets = document.querySelectorAll('.bullet span');
