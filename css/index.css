@@ -60,7 +60,7 @@ a{
 .box-text{
     width: 70vw;
     padding: 45px;
-    margin-top: 8px;
+    margin-top: 120px;
     border-radius: 29px;
     border: 1px solid rgba(255, 255, 255, 0.60);
     background: rgba(0, 0, 0, 0.20);
@@ -195,16 +195,7 @@ body{
 
 .bullet .active {
     background-color: transparent;
-    
     border: solid 1px #FFF;
-}
-
-.assis{
-    margin-top: 185px;
-    right: 15vw;
-    width: 12vw;
-    z-index: 99;
-    position: absolute;
 }
 
 @media screen and (min-width: 551px) and (max-width: 800px){
