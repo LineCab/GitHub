@@ -194,3 +194,7 @@ body{
     
     border: solid 1px #FFF;
 }
+
+@media screen and (min-width: 351px) and (max-width: 500px){
+    
+}

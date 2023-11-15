@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 99%;
-  height: fit-content;
+  height: 100%;
   background: url(/assets/image/info-planete/background.svg);
   background-position: contain;
   color: #fff;
@@ -142,13 +142,17 @@ a {
   top: 120%;
   content: url(/assets/image/info-planete/stars.svg);
 }
-.decorations {
-  display: flex;
-  justify-content: center;
+
+.container{
   position: relative;
-  margin-top: 25px;
-  object-fit: fill;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100vw;
+}
+.ellipse{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .plante {
   position: absolute;
@@ -157,6 +161,6 @@ a {
 }
 .man {
   position: absolute;
-  top: -200%;
+  top: -100%;
   height: 300px;
 }
