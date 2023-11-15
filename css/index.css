@@ -166,7 +166,7 @@ a{
     overflow: hidden;
 }
 body{
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .galaxy {
     display: flex;
@@ -264,4 +264,12 @@ height: 5vh;
         display: block;
     }
     
+    .box-text{
+        width: 70vw;
+        padding: 5px 5px;
+        border-radius: 29px;
+        border: 1px solid rgba(255, 255, 255, 0.60);
+        background: rgba(0, 0, 0, 0.20);
+        backdrop-filter: blur(7px);
+    }
 }
