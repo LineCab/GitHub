@@ -56,12 +56,14 @@ a {
 }
 /*removing the basics of a button*/
 .audio {
-  min-width: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  min-width: 250px;
   cursor: pointer;
   font-size: 20px;
-  padding: 0 20px;
+  padding:10px;
   color: #fff;
-  gap: 10px;
   background: none;
   border: none;
   display: flex;
@@ -70,6 +72,12 @@ a {
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 0.13);
   backdrop-filter: blur(7px);
+}
+.audio img{
+  margin-left: 20px;
+}
+#textchanging{
+  margin-left: 30px;
 }
 .audio::after {
   width: 40px;
