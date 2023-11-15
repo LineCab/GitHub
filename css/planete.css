@@ -3,8 +3,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 99%;
-  height: 100%;
-  background: url(/assets/image/background.svg);
+  height: fit-content;
+  background: url(assets/image/info-planete/background.svg);
   background-position: contain;
   color: #fff;
   font-family: Lexend, sans-serif;
@@ -31,7 +31,7 @@ body {
   position: absolute;
   left: 40%;
   top: 68%;
-  content: url(/assets/image/info-planete/stars.svg);
+  content: url(assets/image/info-planete/stars.svg);
 }
 h1 {
   font-family: Inter;
@@ -40,8 +40,8 @@ h1 {
   color: #fff;
   padding: 25px 50px;
   border-radius: 1.0625rem;
-  border: 1px solid #fff;
-  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.22);;
+  background: rgba(22, 22, 22, 0.13);
   backdrop-filter: blur(8px);
 }
 .commands {
@@ -52,53 +52,42 @@ h1 {
 }
 a {
   color: #fff;
-  text-decoration: none;
 }
+
+
 /*removing the basics of a button*/
 .audio {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  min-width: 250px;
+  min-width: 220px;
   cursor: pointer;
   font-size: 20px;
-  padding:10px;
+  padding: 0 20px;
   color: #fff;
+  gap: 10px;
+  justify-content: space-between;
   background: none;
   border: none;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   border-radius: 10px;
-  border: 1px solid #fff;
-  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(22, 22, 22, 0.13);
   backdrop-filter: blur(7px);
 }
-.audio img{
-  margin-left: 20px;
-}
-#textchanging{
-  margin-left: 30px;
-}
-.audio::after {
+.music-player::after {
   width: 40px;
   height: 38px;
   z-index: -1;
   position: absolute;
   right: -5%;
   top: 68%;
-  content: url(/assets/image/info-planete/jupiter.svg);
+  content: url(assets/image/info-planete/jupiter.svg);
 }
-
 .return {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-
-.return img {
-  height: 18px;
-}
-
 .texts {
   display: flex;
   gap: 150px;
@@ -110,6 +99,19 @@ a {
 }
 .paragraph {
   position: relative;
+  padding: 20px;
+  min-width: 400px;
+  border-radius: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(22, 22, 22, 0.13);
+  backdrop-filter: blur(7px);
+}
+.paragraph:last-child{
+  max-height: 175px;
+  opacity: 0;
+}
+.paragraph p {
+  max-width: 500px;
 }
 .paragraph:nth-child(1)::after {
   width: 40px;
@@ -117,42 +119,54 @@ a {
   z-index: -1;
   transform: rotate(45deg);
   position: absolute;
-  left: 10%;
-  bottom: -20%;
+  left: 50%;
+  bottom: 0%;
   transform: scale(0.7) rotate(75deg);
 
-  content: url(/assets/image/info-planete/stars.svg);
+  content: url(assets/image/info-planete/stars.svg);
 }
-.p-star::before {
+.paragraph:last-child::before {
   width: 40px;
   height: 38px;
   transform: rotate(110deg);
   position: absolute;
   left: -5%;
   top: 50%;
-  content: url(/assets/image/info-planete/stars.svg);
+  content: url(assets/image/info-planete/stars.svg);
 }
 
-.p-star::after {
+.paragraph:last-child::after {
   width: 40px;
   height: 38px;
   transform: rotate(90deg) scale(0.7);
   position: absolute;
   right: -5%;
   top: 120%;
-  content: url(/assets/image/info-planete/stars.svg);
+  content: url(assets/image/info-planete/stars.svg);
 }
-
 .container{
   position: relative;
   overflow: hidden;
   width: 100vw;
 }
 .ellipse{
+  user-select: none;
+  z-index: -2;
   position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 187vh;
+  left: 75%;
+  width: 100vw;
+  animation: moveObject 16s infinite linear;
+}
+.rond{
+  top: 5vw;
+  right: 5%;
+  opacity: 0.3;
+  position: fixed;
+  z-index: -2;
+  width: 15vw;
+  /*Linear gradient, radial from #fff to alpha*/
+  background: radial-gradient(ellipse at center, #fff 0%, rgba(255, 255, 255, 0) 70%);
 }
 .plante {
   position: absolute;
@@ -163,4 +177,81 @@ a {
   position: absolute;
   top: -100%;
   height: 300px;
+}
+
+
+@keyframes moveObject {
+0% {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+100% {
+  transform: translate(-50%, -50%) rotate(360deg);
+}
+}
+/*bouton*/
+.music-player{
+  background: rgba(22, 22, 22, 0.13);
+  width: 249px;
+  height: 62px;
+  padding: 5px 5px;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.22);;
+  backdrop-filter: blur(6.849999904632568px);
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.barre{
+  display: flex;
+}
+.music-player{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 40px;
+}
+#progress{
+  -webkit-appearance: none;
+  width: 100%;
+  height:  6px;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 40px 0;
+}
+#progress::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid #0A1E40;
+  box-shadow: 0 5px 5px rgba(26, 148, 255, 0.2); 
+}
+.controls{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding-right: 40px;
+}
+.controls div{
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #0A1E40;
+  box-shadow: 0 10px 20px rgba(26, 148, 255, 0.32);
+  cursor: pointer;
+}
+.controls div:nth-child(2){
+  transform: scale(1.5);
+  background: #0A1E40;
+  color: #fff;
 }
