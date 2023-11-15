@@ -158,28 +158,20 @@ a{
     align-items: center;
     padding-top: 100px;
     flex-direction: column;
+    flex: 0 0 100%;
 }
 
 /* Add these styles at the end of your existing CSS */
 
-.main {
-    overflow: hidden;
-}
-body{
-    overflow: hidden;
-}
 .galaxy {
     display: flex;
     height: 95vh;
     transition: transform 0.5s ease-in-out;
 }
 
-.galaxy-slide {
-    flex: 0 0 100%;
-}
-
 .bullet {
     display: flex;
+    position: absolute;
     width: 100vw;
     height: 5vh;
     justify-content: center;

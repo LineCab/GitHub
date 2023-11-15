@@ -109,7 +109,7 @@
             <span></span>
         </div>
     </main>
-    <script>
+    <!-- <script>
         const galaxyContainer = document.getElementById('galaxyContainer');
         const bulletsContainer = document.querySelector('.bullet');
         const bullets = document.querySelectorAll('.bullet span');
@@ -133,13 +133,23 @@
         galaxyContainer.addEventListener('touchend', handleDragEnd);
         galaxyContainer.addEventListener('touchmove', handleDragMove);
     
+        // function handleDragStart(e) {
+        //     startX = (e.type === 'touchstart') ? e.touches[0].clientX : e.clientX;
+        //     isDragging = true;
+        // }
+
         function handleDragStart(e) {
-            startX = (e.type === 'touchstart') ? e.touches[0].clientX : e.clientX;
-            isDragging = true;
+            // Ajoutez cette condition pour vérifier si le clic est sur le conteneur de la galaxie
+            if (e.target === galaxyContainer || galaxyContainer.contains(e.target)) {
+                startX = (e.type === 'touchstart') ? e.touches[0].clientX : e.clientX;
+                isDragging = true;
+            }
         }
+
     
         function handleDragEnd() {
             isDragging = false;
+            updateGalaxy();
         }
     
         function handleDragMove(e) {
@@ -150,11 +160,10 @@
     
             if (distance > 50) {
                 currentIndex = Math.max(0, currentIndex - 1);
-                updateGalaxy();
             } else if (distance < -50) {
                 currentIndex = Math.min(bullets.length - 1, currentIndex + 1);
-                updateGalaxy();
             }
+            updateGalaxy();
         }
     
         function updateGalaxy() {
@@ -165,7 +174,63 @@
                 bullet.classList.toggle('active', index === currentIndex);
             });
         }
-    </script>
-    
+    </script> -->
+    <script>
+        const galaxyContainer = document.getElementById('galaxyContainer');
+        const bulletsContainer = document.querySelector('.bullet');
+        const bullets = document.querySelectorAll('.bullet span');
+
+        let currentIndex = 0;
+        let startX = 0;
+        let isDragging = false;
+
+        bullets.forEach((bullet, index) => {
+            bullet.addEventListener('click', () => {
+                currentIndex = index;
+                updateGalaxy();
+            });
+        });
+
+        galaxyContainer.addEventListener('pointerdown', handleDragStart);
+        galaxyContainer.addEventListener('pointerup', handleDragEnd);
+        galaxyContainer.addEventListener('pointermove', handleDragMove);
+
+        function handleDragStart(e) {
+            console.log('Drag start');
+            startX = (e.type === 'touchstart') ? e.touches[0].clientX : e.clientX;
+            isDragging = true;
+        }
+
+        function handleDragEnd() {
+            console.log('Drag end');
+            isDragging = false;
+            updateGalaxy();
+        }
+
+        function handleDragMove(e) {
+            console.log('Drag move');
+            if (!isDragging) return;
+
+            const clientX = (e.type === 'touchmove') ? e.touches[0].clientX : e.clientX;
+            const distance = clientX - startX;
+
+            if (distance > 50) {
+                currentIndex = Math.max(0, currentIndex - 1);
+            } else if (distance < -50) {
+                currentIndex = Math.min(bullets.length - 1, currentIndex + 1);
+            }
+            updateGalaxy();
+        }
+
+        function updateGalaxy() {
+            const translateValue = -currentIndex * 100;
+            galaxyContainer.style.transform = `translateX(${translateValue}%)`;
+
+            bullets.forEach((bullet, index) => {
+                bullet.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+    </script>   
 </body>
 </html>
