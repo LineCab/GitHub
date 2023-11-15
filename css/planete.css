@@ -52,6 +52,7 @@ h1 {
 }
 a {
   color: #fff;
+  text-decoration: none;
 }
 /*removing the basics of a button*/
 .audio {
@@ -78,11 +79,17 @@ a {
   top: 68%;
   content: url(/assets/image/info-planete/jupiter.svg);
 }
+
 .return {
   display: flex;
   gap: 10px;
   align-items: center;
 }
+
+.return img {
+  height: 18px;
+}
+
 .texts {
   display: flex;
   gap: 150px;
