@@ -166,7 +166,7 @@ a{
     overflow: hidden;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .galaxy {
     display: flex;
