@@ -1,15 +1,147 @@
-body{
-    height: 100%;
-    width: 99%;
-    background: url(img/background.svg);
-    background-position: contain;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 99%;
+  height: fit-content;
+  background: url(img/background.svg);
+  background-position: contain;
+  color: #fff;
+  font-family: Lexend, sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 134.375%;
 }
-h1{
-    text-align: center;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 15px;
-    border: 1px solid #fff;
-    background: rgba(0, 0, 0, 0.20);
-    backdrop-filter: blur(20);
-} 
+.content {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 70px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.title::after {
+  width: 40px;
+  height: 38px;
+  z-index: -1;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 40%;
+  top: 68%;
+  content: url(img/stars.svg);
+}
+h1 {
+  font-family: Inter;
+  font-weight: 500;
+  display: inline-block;
+  color: #fff;
+  padding: 25px 50px;
+  border-radius: 1.0625rem;
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+}
+.commands {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  color: #fff;
+}
+/*removing the basics of a button*/
+.audio {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0 20px;
+  color: #fff;
+  gap: 10px;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(7px);
+}
+.audio::after {
+  width: 40px;
+  height: 38px;
+  z-index: -1;
+  position: absolute;
+  right: -5%;
+  top: 68%;
+  content: url(img/jupiter.svg);
+}
+.return {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.texts {
+  display: flex;
+  gap: 150px;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.texts p {
+  position: relative;
+}
+.paragraph {
+  position: relative;
+}
+.paragraph:nth-child(1)::after {
+  width: 40px;
+  height: 38px;
+  z-index: -1;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 10%;
+  bottom: -20%;
+  transform: scale(0.7) rotate(75deg);
+
+  content: url(img/stars.svg);
+}
+.p-star::before {
+  width: 40px;
+  height: 38px;
+  transform: rotate(110deg);
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  content: url(img/stars.svg);
+}
+
+.p-star::after {
+  width: 40px;
+  height: 38px;
+  transform: rotate(90deg) scale(0.7);
+  position: absolute;
+  right: -5%;
+  top: 120%;
+  content: url(img/stars.svg);
+}
+.decorations {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 25px;
+  object-fit: fill;
+  background-repeat: no-repeat;
+}
+.plante {
+  position: absolute;
+  top: -110%;
+  left: 30%;
+}
+.man {
+  position: absolute;
+  top: -200%;
+  height: 300px;
+}
