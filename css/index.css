@@ -159,6 +159,7 @@
 
 .galaxy {
     display: flex;
+    overflow-x: hidden;
     transition: transform 0.5s ease-in-out;
 }
 
