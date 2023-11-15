@@ -226,6 +226,11 @@ body{
         width: 110px;
     }
     
+    .box-text{
+        padding: 30px 30px;
+        width: 80vw;
+    }
+    
 }
 
 @media screen and (min-width: 551px) and (max-width: 800px){
@@ -253,6 +258,15 @@ body{
         width: 90px;
     }
     
+    .box-text{
+        padding: 20px 20px;
+        width: 90vw;
+    }
+
+    .galaxy {
+        height: auto;
+    }
+    
 }
 
 @media screen and (min-width: 0px) and (max-width: 550px){
@@ -275,12 +289,8 @@ body{
     }
     
     .box-text{
-        width: 70vw;
         padding: 5px 5px;
-        border-radius: 29px;
-        border: 1px solid rgba(255, 255, 255, 0.60);
-        background: rgba(0, 0, 0, 0.20);
-        backdrop-filter: blur(7px);
+        width: 90vw;
     }
     
     .assis{
