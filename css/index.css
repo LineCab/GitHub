@@ -203,3 +203,83 @@ body{
 .bullet .active {
     background-color: #DCDDE1;
 }
+
+@media screen and (min-width: 551px) and (max-width: 800px){
+
+    .planetes {
+        grid-template-columns: repeat(15, 5vw);
+        grid-template-rows: repeat(10, 3vh);
+    }
+
+    .planete1 {
+        grid-area: 2 / 1 / 2 / 1;
+    }
+    
+    .planete2 {
+        grid-area: 7 / 5 / 7 / 5;
+    }
+    
+    .planete3 {
+        grid-area: 4 / 10 / 4 / 10;
+    }
+    
+    .planete4 {
+        grid-area: 6 / 14 / 6 / 14;
+    }
+
+    .planete1 img{
+        max-width:200px;
+    }
+    .planete2 img{
+        max-width: 100px;
+    }
+    .planete3 img{
+        max-width: 150px;
+    }
+    .planete4 img{
+        max-width: 120px;
+    }
+    
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px){
+
+    .planetes {
+        grid-template-columns: repeat(15, 5vw);
+        grid-template-rows: repeat(7, 3vh);
+    }
+
+    .planete1 {
+        grid-area: 2 / 1 / 2 / 1;
+    }
+    
+    .planete2 {
+        grid-area: 6 / 5 / 6 / 5;
+    }
+    
+    .planete3 {
+        grid-area: 3 / 10 / 3 / 10;
+    }
+    
+    .planete4 {
+        grid-area: 5 / 14 / 5 / 14;
+    }
+
+    .planete1 img{
+        max-width:160px;
+    }
+    .planete2 img{
+        max-width: 100px;
+    }
+    .planete3 img{
+        max-width: 140px;
+    }
+    .planete4 img{
+        max-width: 110px;
+    }
+
+    .img-planete:hover {
+        display: block;
+    }
+    
+}
