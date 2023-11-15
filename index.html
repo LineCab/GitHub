@@ -10,6 +10,38 @@
 </head>
 <body>
     <main>
+        <button class="audio play-button" style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="27" viewBox="0 0 22 27" fill="none">
+                <path d="M0 2.1716V24.6378C0 26.351 1.88664 27.3919 3.33958 26.4594L20.9916 15.2263C22.3361 14.3806 22.3361 12.4289 20.9916 11.5614L3.33958 0.350015C1.88664 -0.582464 0 0.458443 0 2.1716Z" fill="white"/>
+            </svg>  
+            <p id="textchanging">Lecture audio</p>
+        </button>
+        <audio id="audio-player" loop src="/assets/son/ambiance.mp3"></audio>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const audioPlayer = document.getElementById('audio-player');
+                const playButton = document.querySelector('.play-button');
+                const playIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="27" viewBox="0 0 22 27" fill="none"><path d="M0 2.1716V24.6378C0 26.351 1.88664 27.3919 3.33958 26.4594L20.9916 15.2263C22.3361 14.3806 22.3361 12.4289 20.9916 11.5614L3.33958 0.350015C1.88664 -0.582464 0 0.458443 0 2.1716Z" fill="white"/></svg>';
+                const pauseIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="21" height="25" viewBox="0 0 21 25" fill="none"><path d="M3.5 0C2.57174 0 1.6815 0.368749 1.02513 1.02513C0.368749 1.6815 0 2.57174 0 3.5V21C0 21.9283 0.368749 22.8185 1.02513 23.4749C1.6815 24.1313 2.57174 24.5 3.5 24.5C4.42826 24.5 5.3185 24.1313 5.97487 23.4749C6.63125 22.8185 7 21.9283 7 21V3.5C7 2.57174 6.63125 1.6815 5.97487 1.02513C5.3185 0.368749 4.42826 0 3.5 0ZM17.5 0C16.5717 0 15.6815 0.368749 15.0251 1.02513C14.3687 1.6815 14 2.57174 14 3.5V21C14 21.9283 14.3687 22.8185 15.0251 23.4749C15.6815 24.1313 16.5717 24.5 17.5 24.5C18.4283 24.5 19.3185 24.1313 19.9749 23.4749C20.6313 22.8185 21 21.9283 21 21V3.5C21 2.57174 20.6313 1.6815 19.9749 1.02513C19.3185 0.368749 18.4283 0 17.5 0Z" fill="white"/></svg>';    
+            
+                playButton.addEventListener('click', () => {
+                    if (audioPlayer.paused) {
+                        audioPlayer.play();
+                        playButton.innerHTML = pauseIcon;
+                        document.getElementById('textchanging').innerHTML = "Lecture audio";
+                    } else {
+                        audioPlayer.pause();
+                        playButton.innerHTML = playIcon;
+                        document.getElementById('textchanging').innerHTML = "Lecture audio";
+                    }
+                });
+        
+                // Ajoutez cette ligne pour déclencher le clic automatique sur le bouton au chargement de la page
+                playButton.click();
+            });
+        </script>
+
         <div class="galaxy" id="galaxyContainer">
             <div class="galaxy-slide">
                 <div class="planetes">
@@ -33,10 +65,12 @@
                         <p class="hover-planete">Quatrième nom</p>
                     </div>  
                 </div>
-                <img class="assis" src="./assets/image/perso-assis.png" alt="">         
-                <div class="box-text">
-                    <h2 class="title-galaxy">Galaxie 1 : La surconsommation</h2>
-                    <p class="text-galaxy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non erat vel est vehicula consequat vel in diam. Donec ultricies mollis hendrerit. Ut finibus tempus hendrerit. Fusce hendrerit mattis risus, tincidunt tempor augue consectetur ac. Donec quis enim ligula. Phasellus non porta dui. Aliquam sed rhoncus est, eget vehicula turpis. Donec dignissim hendrerit posuere. Integer aliquam ut nulla eget sollicitudin. Pellentesque at metus eget erat fringilla pharetra.</p>
+                <div class="bottom-box">
+                    <img class="assis" src="./assets/image/perso-assis.png" alt="">         
+                    <div class="box-text">
+                        <h2 class="title-galaxy">Galaxie 2 : La technologie</h2>
+                        <p class="text-galaxy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non erat vel est vehicula consequat vel in diam. Donec ultricies mollis hendrerit. Ut finibus tempus hendrerit. Fusce hendrerit mattis risus, tincidunt tempor augue consectetur ac. Donec quis enim ligula. Phasellus non porta dui. Aliquam sed rhoncus est, eget vehicula turpis. Donec dignissim hendrerit posuere. Integer aliquam ut nulla eget sollicitudin. Pellentesque at metus eget erat fringilla pharetra.</p>
+                    </div>
                 </div>
             </div>
             <div class="galaxy-slide">
@@ -61,11 +95,14 @@
                         <p class="hover-planete">Quatrième nom</p>
                     </div>  
                 </div>
-                <img class="assis" src="./assets/image/perso-assis.png" alt="">         
-                <div class="box-text">
-                    <h2 class="title-galaxy">Galaxie 2 : La technologie</h2>
-                    <p class="text-galaxy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non erat vel est vehicula consequat vel in diam. Donec ultricies mollis hendrerit. Ut finibus tempus hendrerit. Fusce hendrerit mattis risus, tincidunt tempor augue consectetur ac. Donec quis enim ligula. Phasellus non porta dui. Aliquam sed rhoncus est, eget vehicula turpis. Donec dignissim hendrerit posuere. Integer aliquam ut nulla eget sollicitudin. Pellentesque at metus eget erat fringilla pharetra.</p>
+                <div class="bottom-box">
+                    <img class="assis" src="./assets/image/perso-assis.png" alt="">         
+                    <div class="box-text">
+                        <h2 class="title-galaxy">Galaxie 2 : La technologie</h2>
+                        <p class="text-galaxy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non erat vel est vehicula consequat vel in diam. Donec ultricies mollis hendrerit. Ut finibus tempus hendrerit. Fusce hendrerit mattis risus, tincidunt tempor augue consectetur ac. Donec quis enim ligula. Phasellus non porta dui. Aliquam sed rhoncus est, eget vehicula turpis. Donec dignissim hendrerit posuere. Integer aliquam ut nulla eget sollicitudin. Pellentesque at metus eget erat fringilla pharetra.</p>
+                    </div>
                 </div>
+                
             </div>
             
         </div>
@@ -134,6 +171,3 @@
     
 </body>
 </html>
-
-
-
