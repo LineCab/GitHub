@@ -60,13 +60,22 @@ a{
 .box-text{
     width: 70vw;
     padding: 45px;
-    margin-top: 8px;
     border-radius: 29px;
     border: 1px solid rgba(255, 255, 255, 0.60);
     background: rgba(0, 0, 0, 0.20);
     backdrop-filter: blur(7px);
 }
-
+.assis{
+    margin-top: -120px;
+    right: 10vw;
+    width: 130px;
+    z-index: 99;
+    position: absolute;
+}
+.bottom-box{
+    position: absolute;
+    top: 60vh;
+}
 .title-galaxy{
     color: #FFF;
     font-family: Lexend;
@@ -87,9 +96,8 @@ a{
 .planetes {
     display: grid;
     justify-content: center;
-    width: 100%;
     grid-template-columns: repeat(25, 3vw);
-    grid-template-rows: repeat(15, 2vh);
+    grid-template-rows: repeat(15, 2vw);
     margin: 0px auto;
     padding-top: 40px;
 }
@@ -99,7 +107,6 @@ a{
     justify-content: center;
     flex-direction: column;
 }
-
 .planete1 {
     grid-area: 2 / 1 / 3 / 1;
 }
@@ -115,20 +122,18 @@ a{
 .planete4 {
     grid-area: 6 / 22 / 6 / 22;
 }
-
-.planete1 img{
-    max-width:300px;
+.planete1  .img-planete{
+    width: 360px;
 }
-.planete2 img{
-    max-width: 200px;
+.img-planete:nth-child(2){
+    width: 100px;
 }
-.planete3 img{
-    max-width: 250px;
+.img-planete:nth-child(3){
+    width: 140px;
 }
-.planete4 img{
-    max-width: 220px;
+.img-planete:nth-child(4){
+    width: 170px;
 }
-
 .hover-planete {
     display: none; /* Initially hide the text */
     color: #FFF;
@@ -158,8 +163,8 @@ a{
 
 /* Add these styles at the end of your existing CSS */
 
-main {
-    overflow-x: hidden;
+.main {
+    overflow: hidden;
 }
 body{
     overflow: hidden;
@@ -197,92 +202,4 @@ body{
     background-color: transparent;
     
     border: solid 1px #FFF;
-}
-
-.assis{
-    margin-top: 185px;
-    right: 15vw;
-    width: 12vw;
-    z-index: 99;
-    position: absolute;
-}
-
-@media screen and (min-width: 551px) and (max-width: 800px){
-
-    .planetes {
-        grid-template-columns: repeat(15, 5vw);
-        grid-template-rows: repeat(10, 3vh);
-    }
-
-    .planete1 {
-        grid-area: 2 / 1 / 2 / 1;
-    }
-    
-    .planete2 {
-        grid-area: 7 / 5 / 7 / 5;
-    }
-    
-    .planete3 {
-        grid-area: 4 / 10 / 4 / 10;
-    }
-    
-    .planete4 {
-        grid-area: 6 / 14 / 6 / 14;
-    }
-
-    .planete1 img{
-        max-width:200px;
-    }
-    .planete2 img{
-        max-width: 100px;
-    }
-    .planete3 img{
-        max-width: 150px;
-    }
-    .planete4 img{
-        max-width: 120px;
-    }
-    
-}
-
-@media screen and (min-width: 0px) and (max-width: 550px){
-
-    .planetes {
-        grid-template-columns: repeat(15, 5vw);
-        grid-template-rows: repeat(7, 3vh);
-    }
-
-    .planete1 {
-        grid-area: 2 / 1 / 2 / 1;
-    }
-    
-    .planete2 {
-        grid-area: 6 / 5 / 6 / 5;
-    }
-    
-    .planete3 {
-        grid-area: 3 / 10 / 3 / 10;
-    }
-    
-    .planete4 {
-        grid-area: 5 / 14 / 5 / 14;
-    }
-
-    .planete1 img{
-        max-width:160px;
-    }
-    .planete2 img{
-        max-width: 100px;
-    }
-    .planete3 img{
-        max-width: 140px;
-    }
-    .planete4 img{
-        max-width: 110px;
-    }
-
-    .img-planete:hover {
-        display: block;
-    }
-    
 }
