@@ -162,7 +162,7 @@ a{
 /* Add these styles at the end of your existing CSS */
 
 .main {
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 body{
