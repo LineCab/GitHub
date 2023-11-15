@@ -120,17 +120,18 @@ a{
 .planete4 {
     grid-area: 3 / 22 / 4 / 22;
 }
-.planete1  .img-planete{
-    width: 260px;
+
+.planete1 img{
+    max-width:180px;
 }
-.img-planete:nth-child(2){
-    width: 200px;
+.planete2 img{
+    max-width: 200px;
 }
-.img-planete:nth-child(3){
-    width: 150px;
+.planete3 img{
+    max-width: 150px;
 }
-.img-planete:nth-child(4){
-    width: 200px;
+.planete4 img{
+    max-width: 200px;
 }
 .hover-planete {
     display: none; /* Initially hide the text */
@@ -142,7 +143,7 @@ a{
     font-weight: 500;
     line-height: normal;
     position: absolute;
-    margin-top: 150px;
+    margin-top: 220px;
 }
 
 /* Show the text when hovering over the corresponding planet */
@@ -209,7 +210,7 @@ body{
     }
 
     .planete1 img{
-        max-width:230px;
+        max-width:150px;
     }
     .planete2 img{
         max-width: 170px;
