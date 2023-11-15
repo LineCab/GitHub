@@ -199,6 +199,14 @@ body{
     border: solid 1px #FFF;
 }
 
+.assis{
+    margin-top: 185px;
+    right: 15vw;
+    width: 12vw;
+    z-index: 99;
+    position: absolute;
+}
+
 @media screen and (min-width: 551px) and (max-width: 800px){
 
     .planetes {
@@ -271,6 +279,10 @@ body{
     }
     .planete4 img{
         max-width: 110px;
+    }
+
+    .img-planete:hover {
+        display: block;
     }
     
 }
