@@ -28,10 +28,27 @@
             <img src="/assets/image/info-planete/return.svg" alt="" />
             <p>Retour</p>
         </a>
-        <button class="audio">
-          <img src="/assets/image/info-planete/audio.svg" alt="icon play the audio" />
-          Lecture audio
+        <button class="audio play-button">
+            <img src="/assets/image/info-planete/audio.svg" alt="icon play the audio" />
+            <h5 id="textchanging">Lecture audio</h5>
         </button>
+        <audio id="audio-player" src="/assets/son/musique.mp3"></audio>
+  
+        <script>
+        const audioPlayer = document.getElementById('audio-player');
+        const playButton = document.querySelector('.play-button');
+    
+        playButton.addEventListener('click', () => {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            document.getElementById('textchanging').innerHTML = "Pause";
+        } else {
+            audioPlayer.pause();
+            document.getElementById('textchanging').innerHTML = "Jouer";
+        }
+        });
+        </script>
+
       </div>
       <div class="texts">
         <div class="paragraph">

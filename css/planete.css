@@ -56,6 +56,7 @@ a {
 }
 /*removing the basics of a button*/
 .audio {
+  min-width: 220px;
   cursor: pointer;
   font-size: 20px;
   padding: 0 20px;
