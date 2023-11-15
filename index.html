@@ -76,35 +76,41 @@
         const galaxyContainer = document.getElementById('galaxyContainer');
         const bulletsContainer = document.querySelector('.bullet');
         const bullets = document.querySelectorAll('.bullet span');
-
+    
         let currentIndex = 0;
         let startX = 0;
         let isDragging = false;
-
+    
         bullets.forEach((bullet, index) => {
             bullet.addEventListener('click', () => {
                 currentIndex = index;
                 updateGalaxy();
             });
         });
-
+    
         galaxyContainer.addEventListener('mousedown', handleDragStart);
         galaxyContainer.addEventListener('mouseup', handleDragEnd);
         galaxyContainer.addEventListener('mousemove', handleDragMove);
-
+    
+        galaxyContainer.addEventListener('touchstart', handleDragStart);
+        galaxyContainer.addEventListener('touchend', handleDragEnd);
+        galaxyContainer.addEventListener('touchmove', handleDragMove);
+    
         function handleDragStart(e) {
-            startX = e.clientX;
+            startX = (e.type === 'touchstart') ? e.touches[0].clientX : e.clientX;
             isDragging = true;
         }
-
+    
         function handleDragEnd() {
             isDragging = false;
         }
-
+    
         function handleDragMove(e) {
             if (!isDragging) return;
-
-            const distance = e.clientX - startX;
+    
+            const clientX = (e.type === 'touchmove') ? e.touches[0].clientX : e.clientX;
+            const distance = clientX - startX;
+    
             if (distance > 50) {
                 currentIndex = Math.max(0, currentIndex - 1);
                 updateGalaxy();
@@ -113,16 +119,17 @@
                 updateGalaxy();
             }
         }
-
+    
         function updateGalaxy() {
             const translateValue = -currentIndex * 100;
             galaxyContainer.style.transform = `translateX(${translateValue}%)`;
-
+    
             bullets.forEach((bullet, index) => {
                 bullet.classList.toggle('active', index === currentIndex);
             });
         }
     </script>
+    
 </body>
 </html>
 
