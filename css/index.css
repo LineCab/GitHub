@@ -221,6 +221,11 @@ height: 5vh;
         max-width: 170px;
     }
     
+    .assis{
+        margin-top: -100px;
+        width: 110px;
+    }
+    
 }
 
 @media screen and (min-width: 551px) and (max-width: 800px){
@@ -241,6 +246,11 @@ height: 5vh;
     }
     .planete4 img{
         max-width: 140px;
+    }
+    
+    .assis{
+        margin-top: -80px;
+        width: 90px;
     }
     
 }
@@ -271,5 +281,10 @@ height: 5vh;
         border: 1px solid rgba(255, 255, 255, 0.60);
         background: rgba(0, 0, 0, 0.20);
         backdrop-filter: blur(7px);
+    }
+    
+    .assis{
+        margin-top: -60px;
+        width: 70px;
     }
 }
