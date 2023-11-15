@@ -4,7 +4,7 @@ body {
   justify-content: space-between;
   width: 99%;
   height: fit-content;
-  background: url(img/background.svg);
+  background: url(/assets/image/info-planete/background.svg);
   background-position: contain;
   color: #fff;
   font-family: Lexend, sans-serif;
@@ -31,7 +31,7 @@ body {
   position: absolute;
   left: 40%;
   top: 68%;
-  content: url(img/stars.svg);
+  content: url(/assets/image/info-planete/stars.svg);
 }
 h1 {
   font-family: Inter;
@@ -77,7 +77,7 @@ a {
   position: absolute;
   right: -5%;
   top: 68%;
-  content: url(img/jupiter.svg);
+  content: url(/assets/image/info-planete/jupiter.svg);
 }
 .return {
   display: flex;
@@ -106,7 +106,7 @@ a {
   bottom: -20%;
   transform: scale(0.7) rotate(75deg);
 
-  content: url(img/stars.svg);
+  content: url(/assets/image/info-planete/stars.svg);
 }
 .p-star::before {
   width: 40px;
@@ -115,7 +115,7 @@ a {
   position: absolute;
   left: -5%;
   top: 50%;
-  content: url(img/stars.svg);
+  content: url(/assets/image/info-planete/stars.svg);
 }
 
 .p-star::after {
@@ -125,7 +125,7 @@ a {
   position: absolute;
   right: -5%;
   top: 120%;
-  content: url(img/stars.svg);
+  content: url(/assets/image/info-planete/stars.svg);
 }
 .decorations {
   display: flex;
