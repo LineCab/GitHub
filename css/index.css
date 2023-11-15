@@ -151,7 +151,6 @@ a{
     display: block;
 }
 
-
 .galaxy-slide {
     display: flex;
     align-items: center;
@@ -162,7 +161,6 @@ a{
 /* Add these styles at the end of your existing CSS */
 
 .main {
-    height: 100vh;
     overflow: hidden;
 }
 body{
@@ -180,7 +178,7 @@ body{
 .bullet {
     display: flex;
     width: 100vw;
-height: 5vh;
+    height: 5vh;
     justify-content: center;
     background-image: url('../assets/image/fond.svg');
 }
