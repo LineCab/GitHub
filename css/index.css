@@ -157,7 +157,9 @@ a{
 .main {
     overflow: hidden;
 }
-
+body{
+    overflow: hidden;
+}
 .galaxy {
     display: flex;
     transition: transform 0.5s ease-in-out;
