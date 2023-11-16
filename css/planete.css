@@ -5,7 +5,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: fit-content;
-  background: url(../assets/image/background.jpg);
+  background: url(../assets/image/background.webp);
   background-position: contain;
   color: #fff;
   font-family: Lexend, sans-serif;

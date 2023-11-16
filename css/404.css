@@ -56,7 +56,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('../assets/image/background.jpg');
+    background-image: url('../assets/image/background.webp');
 }
 .title-404{
     color: #FFF;

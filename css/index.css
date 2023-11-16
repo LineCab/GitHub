@@ -8,7 +8,7 @@ html, body {
 
 body{
     cursor: none;
-    background-image: url('../assets/image/background.jpg');
+    background-image: url('../assets/image/background.webp');
 }
 #custom-cursor {
     position: fixed;
@@ -178,7 +178,7 @@ body{
     width: 100vw;
     height: 5vh;
     justify-content: center;
-    background-image: url('../assets/image/background.jpg');
+    background-image: url('../assets/image/background.webp');
 }
 
 .bullet span {
@@ -223,7 +223,7 @@ body{
     height: 7vh;
     text-align: center;
     flex-direction: column;
-    background-image: url('/assets/image/background.jpg');
+    background-image: url('/assets/image/background.webp');
 }
 
 .footer a{
