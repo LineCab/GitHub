@@ -1,0 +1,397 @@
+a{
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.galaxy-slide{
+    width: 100vw;
+
+    background-image: url('../assets/image/background.jpg');
+}
+.box-text{
+    width: 70vw;
+    padding: 35px 65px;
+    border-radius: 29px;
+    border: 1px solid rgba(255, 255, 255, 0.60);
+    background: rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(7px);
+}
+.assis{
+    margin-top: -120px;
+    right: 10vw;
+    width: 130px;
+    z-index: 99;
+    position: absolute;
+    user-select: none;
+}
+.bottom-box{
+    position: absolute;
+    top: 68vh;
+}
+.title-galaxy{
+    color: #FFF;
+    font-family: Lexend;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.text-galaxy{
+    color: #FFF;
+    font-family: Lexend;
+    font-size: 17px;
+    font-style: normal;
+    margin-top: 14px;
+    font-weight: 300;
+    line-height: normal;
+}
+.planetes {
+    user-select: none;
+    display: grid;
+    grid-template-columns: repeat(25, 3vw);
+    grid-template-rows: repeat(10, 2vw);
+    padding-top: 40px;
+}
+.flex-planete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.planete1 {
+    grid-area: 5 / 3 / 6 / 3;
+    height: fit-content;
+}
+
+.planete2 {
+    grid-area: 1 / 12 / 1 / 8;
+    height: fit-content;
+}
+
+.planete3 {
+    grid-area: 8 / 15 / 9 / 15;
+    height: fit-content;
+}
+
+.planete4 {
+    grid-area: 3 / 22 / 4 / 22;
+    height: fit-content;
+}
+
+.planete1 img{
+    max-width:180px;
+}
+.planete2 img{
+    max-width: 90px;
+}
+.planete3 img{
+    max-width: 150px;
+}
+.planete4 img{
+    max-width: 200px;
+}
+.hover-planete {
+    display: none; /* Initially hide the text */
+    color: #FFF;
+    text-align: center;
+    font-family: Lexend;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 12px;
+    width: 200px;
+    position: relative;
+    
+}
+
+/* Show the text when hovering over the corresponding planet */
+
+.img-planete:hover + .hover-planete {
+    display: block;
+}
+
+.galaxy-slide {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: column;
+    flex: 0 0 100%;
+}
+
+/* Add these styles at the end of your existing CSS */
+
+.galaxy {
+    display: flex;
+    height: 95vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+.bullet {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 5vh;
+    justify-content: center;
+    background-image: url('../assets/image/background.svg');
+}
+
+.bullet span {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+  
+    border-radius: 50%;
+    display: inline-block;
+    background-color: transparent;
+    border: solid 1px #FFF;
+}
+
+.bullet .active {
+    background-color: #DCDDE1;
+}
+
+.audio{
+    display: flex;
+    position: absolute;
+    right: 5vw;
+    top: 64px;
+    background: transparent;
+    border: none;
+    z-index: 999;
+
+}
+.audio svg{
+   scale: 2;
+}
+.audio svg path{
+    fill: #FFF;
+}
+
+.footer{
+    display: flex;
+    position: absolute;
+    font-family: Lexend;
+    margin-top: 5vh;
+    width: 100vw;
+    height: 7vh;
+    text-align: center;
+    flex-direction: column;
+    background-image: url('/assets/image/background.svg');
+}
+
+.footer a{
+    color: #FFF;
+    margin-bottom: 10px;
+}
+.footer a:hover{
+    opacity: 0.8;
+}
+
+.footer p{
+    color: #FFF;
+}
+
+
+
+@media screen and (min-width: 551px) and (max-width: 1000px){
+    .galaxy{
+        height: auto;
+    }
+    .galaxy-slide{
+        width: 100vw;
+        height: auto;
+        padding-bottom: 120px;
+    }
+    .box-text{
+        width: 70vw;
+        padding: 35px 25px;
+    }
+    .assis{
+        margin-top: -80px;
+        right: 3vw;
+        width: 90px;
+    }
+    .bottom-box{
+        top: 70vh;
+    }
+    .title-galaxy{
+        font-size: 20px;
+    }
+    .text-galaxy{
+        font-size: 14px;
+        margin-top: 14px;
+    }
+    .planetes {
+        max-width: 100vw;
+        grid-template-columns: repeat(4, 10vw);
+        grid-template-rows: repeat(6, 0.5fr);
+        padding-top: 0px;
+    }
+    .planete1 {
+        margin-left: 5vw;
+        grid-area: 1 / auto / 1 / auto;
+    }
+    
+    .planete2 {
+        margin-left: 5vw;
+        grid-area: 3 / 2 / 3 / 2;
+    }
+    
+    .planete3 {
+        margin-top: -100px;
+        grid-area: 2 / 5 / 2 / 5;
+    }
+    
+    .planete4 {
+        grid-area: 3 / 6 / 3 / 6;
+    }
+    
+    .planete1 img{
+        max-width:130px;
+    }
+    .planete2 img{
+        max-width: 110px;
+    }
+    .planete3 img{
+        max-width: 80px;
+    }
+    .planete4 img{
+        max-width: 120px;
+    }
+    .hover-planete {
+        display: block;
+        font-size: 14px;
+        width: 100px;        
+    }
+
+    .galaxy-slide {
+        padding-top: 25px;
+    }
+    
+    .bullet {
+        width: 100vw;
+        height: 5vh;
+    }
+    
+    .bullet span {
+        height: 15px;
+        width:15px;
+    }
+    .audio{
+        right: 7vw;
+        top: 32px;
+    }
+    .audio svg{
+       scale: 1.5;
+    }
+    
+    .footer{
+        margin-top: 5vh;
+        width: 100vw;
+        height: 7vh;
+    }
+
+}
+@media screen and (min-width: 0px) and (max-width: 550px){
+    .galaxy{
+        height: auto;
+    }
+    .galaxy-slide{
+        width: 100vw;
+        height: auto;
+        padding-bottom: 360px;
+    }
+    .box-text{
+        width: 70vw;
+        padding: 35px 25px;
+    }
+    .assis{
+        margin-top: -80px;
+        right: 3vw;
+        width: 90px;
+    }
+    .bottom-box{
+        top: 80vh;
+    }
+    .title-galaxy{
+        font-size: 20px;
+    }
+    .text-galaxy{
+        font-size: 14px;
+        margin-top: 14px;
+    }
+    .planetes {
+        max-width: 100vw;
+        grid-template-columns: repeat(4, 10vw);
+        grid-template-rows: repeat(6, 0.5fr);
+        padding-top: 0px;
+    }
+    .planete1 {
+        margin-left: 5vw;
+        grid-area: 1 / auto / 1 / auto;
+    }
+    
+    .planete2 {
+        margin-left: 5vw;
+        grid-area: 3 / 2 / 3 / 2;
+    }
+    
+    .planete3 {
+        grid-area: 2 / 5 / 2 / 5;
+    }
+    
+    .planete4 {
+        grid-area: 4 / 5 / 4 / 5;
+    }
+    
+    .planete1 img{
+        max-width:100px;
+    }
+    .planete2 img{
+        max-width: 100px;
+    }
+    .planete3 img{
+        max-width: 50px;
+    }
+    .planete4 img{
+        max-width: 80px;
+    }
+    .hover-planete {
+        display: block;
+        font-size: 14px;
+        width: 100px;        
+    }
+
+    .galaxy-slide {
+        padding-top: 25px;
+    }
+    
+    .bullet {
+        width: 100vw;
+        height: 5vh;
+    }
+    
+    .bullet span {
+        height: 15px;
+        width:15px;
+    }
+    .audio{
+        right: 7vw;
+        top: 32px;
+    }
+    .audio svg{
+       scale: 1.5;
+    }
+    
+    .footer{
+        margin-top: 5vh;
+        width: 100vw;
+        height: 7vh;
+    }
+
+}
