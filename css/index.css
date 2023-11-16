@@ -52,11 +52,7 @@
 a{
     text-decoration: none;
 }
-
-body{
-    overflow-x: hidden;
-}
-
+body{overflow-x: hidden;}
 .galaxy-slide{
     width: 100vw;
     height: 95vh; 
@@ -155,6 +151,7 @@ body{
     line-height: normal;
     margin-top: 12px;
     width: 200px;
+    position: relative;
     
 }
 
