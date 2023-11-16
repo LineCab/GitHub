@@ -46,3 +46,54 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* Lexend */
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/font/Lexend-Light.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/font/Lexend-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets/font/Lexend-Medium.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/font/Lexend-SemiBold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/font/Lexend-Bold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../assets/font/Lexend-ExtraBold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../assets/font/Lexend-Black.woff2') format('woff2');
+    font-display: swap;
+}
