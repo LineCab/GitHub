@@ -17,101 +17,111 @@
       rel="stylesheet"
     />
     <title>Planète 1</title>
-    <script src="https://kit.fontawesome.com/3e029111f7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3e029111f7.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="content">
-      <div class="title">
-        <h1>Planète Promoeder</h1>
-      </div>
-      <div class="commands">
-        <a href="index.html">
-          <div class="return">
-            <img src="/assets/image/info-planete/return.svg" alt="" />
-            <p>Retour</p>
-          </div>
-        </a>
-        <div class="music-player">
-          <div class="barre">
+      <div class="content">
+        <div class="title">
+          <h1>Planète Promoeder</h1>
+        </div>
+        <div class="commands">
+          <a href="#">
+            <div class="return">
+              <img src="assets/image/info-planete/return.svg" alt="" />
+              <p>Retour</p>
+            </div>
+          </a>
+          <div class="music-player">
+            <div class="barre">
               <audio id="song">
-                  <source src="/assets/son/musique.mp3" type="audio/mpeg">
+                <source src="musique.mp3" type="audio/mpeg" />
               </audio>
-              <input type="range" value="0" id="progress">
-          </div>
+              <input type="range" value="0" id="progress" />
+            </div>
 
-          <div class="controls">
+            <div class="controls">
               <div onclick="playPause()">
                 <i class="fa-solid fa-play" id="ctrlIcon"></i>
               </div>
+            </div>
           </div>
-      </div>
-  <script>
+          <script>
+            let progress = document.getElementById("progress");
+            let song = document.getElementById("song");
+            let ctrlIcon = document.getElementById("ctrlIcon");
 
-      let progress = document.getElementById("progress");
-      let song = document.getElementById("song");
-      let ctrlIcon = document.getElementById("ctrlIcon");
+            song.onloadedmetadata = function () {
+              progress.max = song.duration;
+              progress.value = song.currentTime;
+            };
 
-      song.onloadedmetadata = function () {
-          progress.max = song.duration;
-          progress.value = song.currentTime;
-      }
+            function playPause() {
+              if (ctrlIcon.classList.contains("fa-pause")) {
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+              } else {
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+              }
+            }
 
-      function playPause() {
-          if (ctrlIcon.classList.contains("fa-pause")) {
-              song.pause();
-              ctrlIcon.classList.remove("fa-pause");
-              ctrlIcon.classList.add("fa-play");
-          }
-          else {
+            if (song.play()) {
+              setInterval(() => {
+                progress.value = song.currentTime;
+              }, 500);
+            }
+
+            progress.onchange = function () {
               song.play();
+              song.currentTime = progress.value;
               ctrlIcon.classList.add("fa-pause");
               ctrlIcon.classList.remove("fa-play");
-          }
-      }
-
-      if (song.play()) {
-          setInterval(() => {
-              progress.value = song.currentTime;
-          }, 500);
-      }
-
-      progress.onchange = function () {
-          song.play();
-          song.currentTime = progress.value;
-          ctrlIcon.classList.add("fa-pause");
-          ctrlIcon.classList.remove("fa-play");
-      }
-
-
-  </script>
-
-      </div>
-      <div class="texts">
-        <div class="paragraph">
-          <p>
-            Cette planète était brumeuse. La Petite Astronaute regardait autour d’elle. De grandes banderoles “*En promotion !*” étaient accrochées aux arbres, aux rochers, aux nuages et à tous les objets présents sur la planète. Des oiseaux s’envolaient, avec le même texte tatoué sur leurs jolies plumes.
-          </p>
-          <p>
-            La Petite Astronaute se demandait pourquoi on tenait tant à lui faire acheter des objets dont elle n’avait pas l’utilité. Toutes ces offres la tentait, mais serait-elle plus heureuse en possédant ces objets ? Si elle achetait cet arbre, un autre repousserait au même endroit, et que ferait cette planète avec deux arbres identiques ? Souhaiterait-elle alors acheter ce nouvel arbre, dans l’espoir que cela lui apporte du bonheur ?
-
-          </p>
-          <p>
+            };
+          </script>
+        </div>
+        <div class="texts">
+          <div class="paragraph">
             <p>
-            La petite cosmonaute possédait peu de biens : sa fusée, son livre favori et une plante verte. Elle savait qu’ajouter un arbre à sa collection ne servirait à rien d’autre qu’à encombrer sa fusée. Alors elle s’en alla.
+              Cette planète était brumeuse. La Petite Astronaute regardait
+              autour d’elle. De grandes banderoles “*En promotion !*” étaient
+              accrochées aux arbres, aux rochers, aux nuages et à tous les
+              objets présents sur la planète. Des oiseaux s’envolaient, avec le
+              même texte tatoué sur leurs jolies plumes.
             </p>
-        </div>
-        <div class="paragraph">
-          <p class="p-star">
-          </p>
+            <p>
+              La Petite Astronaute se demandait pourquoi on tenait tant à lui
+              faire acheter des objets dont elle n’avait pas l’utilité. Toutes
+              ces offres la tentait, mais serait-elle plus heureuse en possédant
+              ces objets ? Si elle achetait cet arbre, un autre repousserait au
+              même endroit, et que ferait cette planète avec deux arbres
+              identiques ? Souhaiterait-elle alors acheter ce nouvel arbre, dans
+              l’espoir que cela lui apporte du bonheur ?
+            </p>
+            <p></p>
+            <p>
+              La petite cosmonaute possédait peu de biens : sa fusée, son livre
+              favori et une plante verte. Elle savait qu’ajouter un arbre à sa
+              collection ne servirait à rien d’autre qu’à encombrer sa fusée.
+              Alors elle s’en alla.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <img class="ellipse" src="assets/image/info-planete/planete.svg" alt="" />
-    <div class="container">
-      <img class="man" src="assets/image/info-planete/man.svg" alt="" />
-      <img class="plante" src="assets/image/info-planete/plante.svg" alt="" />
-      <img class="rond" src="assets/image/info-planete/rond.svg" alt="" />
+      <div class="persos">
+        <img class="princesse" src="/assets/image/info-planete/princesse.gif" alt="Personnage">
+        <img class="ellipse" src="/assets/image/info-planete/planete1.svg" alt="" />
+      </div>
 
-    </div>
+
+      <div class="container">
+        <img class="man" src="assets/image/info-planete/man.svg" alt="" />
+        <img class="plante" src="assets/image/info-planete/plante.svg" alt="" />
+        <img class="rond" src="assets/image/info-planete/rond.svg" alt="" />
+      </div>
   </body>
 </html>

@@ -19,6 +19,10 @@ body{
     background: rgba(0, 0, 0, 0.20);
     backdrop-filter: blur(7px);
 }
+.bottom-box{
+    position: absolute;
+    top: 68vh;
+}
 .assis{
     margin-top: -120px;
     right: 10vw;
@@ -26,10 +30,6 @@ body{
     z-index: 99;
     position: absolute;
     user-select: none;
-}
-.bottom-box{
-    position: absolute;
-    top: 68vh;
 }
 .title-galaxy{
     color: #FFF;
