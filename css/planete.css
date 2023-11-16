@@ -160,10 +160,25 @@ a {
   display: block;
   position: absolute;
   user-select: none;
-  width: 1400px;
   animation: moveObject 40s infinite linear;
   margin-top: 600px;
   margin-left: 1200px;
+}
+
+.promotion{
+  width: 2000px;
+}
+
+.ressource{
+  width: 1800px;
+}
+
+.agriculture{
+  width: 1500px;
+}
+
+.obsolescence{
+  width: 1700px;
 }
 
 .princesse {
@@ -295,9 +310,12 @@ ul{
 
 @media screen and (max-width: 1600px) and (min-width: 1100px){
   .ellipse {
-    width: 1400px;
-    margin-top: 680px;
+    margin-top: 650px;
     margin-left: 1100px;
+  }
+
+  .promo{
+    width: 2300px;
   }
   
   .princesse {
