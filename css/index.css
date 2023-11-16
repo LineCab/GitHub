@@ -7,7 +7,15 @@ html, body {
 }
 
 body{
+    cursor: none;
     background-image: url('../assets/image/background.jpg');
+}
+#custom-cursor {
+    position: fixed;
+    width: 24px; /* Ajustez la taille selon vos besoins */
+    height: 24px;
+    pointer-events: none; /* Permet aux événements de passer à travers le curseur */
+    z-index: 9999; /* Assurez-vous que le curseur apparaît au-dessus de tout le reste */
 }
 
 .galaxy-slide{
