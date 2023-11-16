@@ -127,45 +127,48 @@
         </div>
     </main>
     <script>
-        
         const galaxyContainer = document.getElementById('galaxyContainer');
         const bulletsContainer = document.querySelector('.bullet');
         const bullets = document.querySelectorAll('.bullet span');
-
+    
         let currentIndex = 0;
         let startX = 0;
         let isDragging = false;
-
+    
         bullets.forEach((bullet, index) => {
             bullet.addEventListener('click', () => {
                 currentIndex = index;
                 updateGalaxy();
             });
         });
-
-        galaxyContainer.addEventListener('pointerdown', handleDragStart);
-        galaxyContainer.addEventListener('pointerup', handleDragEnd);
-        galaxyContainer.addEventListener('pointermove', handleDragMove);
-
+    
+        galaxyContainer.addEventListener('mousedown', handleDragStart);
+        galaxyContainer.addEventListener('mouseup', handleDragEnd);
+        galaxyContainer.addEventListener('mousemove', handleDragMove);
+    
+        galaxyContainer.addEventListener('touchstart', handleDragStart);
+        galaxyContainer.addEventListener('touchend', handleDragEnd);
+        galaxyContainer.addEventListener('touchmove', handleDragMove);
+    
         function handleDragStart(e) {
             console.log('Drag start');
             startX = (e.type === 'touchstart') ? e.touches[0].clientX : e.clientX;
             isDragging = true;
         }
-
+    
         function handleDragEnd() {
             console.log('Drag end');
             isDragging = false;
             updateGalaxy();
         }
-
+    
         function handleDragMove(e) {
             console.log('Drag move');
             if (!isDragging) return;
-
+    
             const clientX = (e.type === 'touchmove') ? e.touches[0].clientX : e.clientX;
             const distance = clientX - startX;
-
+    
             if (distance > 50) {
                 currentIndex = Math.max(0, currentIndex - 1);
             } else if (distance < -50) {
@@ -173,16 +176,16 @@
             }
             updateGalaxy();
         }
-
+    
         function updateGalaxy() {
             const translateValue = -currentIndex * 100;
             galaxyContainer.style.transform = `translateX(${translateValue}%)`;
-
+    
             bullets.forEach((bullet, index) => {
                 bullet.classList.toggle('active', index === currentIndex);
             });
         }
-
-    </script>   
+    </script>
+      
 </body>
 </html>
