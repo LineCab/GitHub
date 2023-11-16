@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Continuez votre expérience immersive et suivez la petite Astronaute dans cette planète où tout se monnaie.">
+    <meta name="description" content="Concluez votre expérience immersive avec cette planète où les ressources naturelles ont été très utilisées.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/planete.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -92,7 +92,7 @@
             var bouton = document.getElementById("links");
 
             bouton.addEventListener("click", function () {
-                if (bouton.textContent === "Cliquez pour avoir les informations scientifiques") {
+                if (bouton.textContent === "Cliquez pour en savoir plus") {
                     bouton.innerHTML = "";
                     bouton.innerHTML += `<head>
                     <style>
@@ -107,10 +107,9 @@
                         margin-bottom: 10px;
                       }
                       </style></head>`;
-                    bouton.innerHTML += `<li><a href="https://www.cosmopolitan.fr/comment-arreter-la-surconsommation,2074631.asp" target="_blank">4 astuces pour arrêter la surconsommation et mieux gérer ses dépenses</a></li>
-                    <li><a href="https://www.linfodurable.fr/conso/black-friday-quelles-sont-les-alternatives-responsables-35453">Black Friday : quelles sont les alternatives responsables ?</a></li>
-                    <li><a href="https://www.tf1info.fr/environnement-ecologie/black-friday-25-novembre-un-vendredi-noir-de-promotions-pour-l-environnement-et-les-droits-humains-2239703.html">Black Friday : un vendredi noir pour l'environnement et les droits humains</a></li>
-                    
+                    bouton.innerHTML += `<li><a href="https://naturefrance.fr/surexploitation-des-ressources" target="_blank">Surexploitation des ressources</a></li>
+                    <li><a href="https://www.conservation-nature.fr/ecologie/consequences-surexploitation-biodiversite/" target="_blank">Conséquences de la surexploitation sur la biodiversité</a></li>
+                                        
                     `;
                 } else {
                     bouton.textContent = "Cliquez pour avoir les informations scientifiques";
