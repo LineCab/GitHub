@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Continuez votre expérience immersive et suivez la petite Astronaute dans cette planète où tout se monnaie.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/planete.css" rel="stylesheet" />
+    <link href="css/planete.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
-    <title>Planète 1</title>
+    <title>Promoeder</title>
     <script
       src="https://kit.fontawesome.com/3e029111f7.js"
       crossorigin="anonymous"
@@ -37,7 +38,7 @@
           <div class="music-player">
             <div class="barre">
               <audio id="song">
-                <source src="/assets/son/musique.mp3" type="audio/mpeg" />
+                <source src="assets/son/musique.mp3" type="audio/mpeg" />
               </audio>
               <input type="range" value="0" id="progress" />
             </div>
@@ -82,6 +83,36 @@
               ctrlIcon.classList.add("fa-pause");
               ctrlIcon.classList.remove("fa-play");
             };
+                      // bouton pour afficher les informations scientifiques
+          document.addEventListener("DOMContentLoaded", function () {
+            var bouton = document.getElementById("links");
+
+            bouton.addEventListener("click", function () {
+                if (bouton.textContent === "Cliquez pour avoir les informations scientifiques") {
+                    bouton.innerHTML = "";
+                    bouton.innerHTML += `<head>
+                    <style>
+                      ul{
+                        list-style: none;
+                        decoration: none;
+                      }
+                      li{
+                        text-align: left;
+                        font-size: 20px;
+                        decoration: none;
+                        margin-bottom: 10px;
+                      }
+                      </style></head>`;
+                    bouton.innerHTML += `<li><a href="https://www.cosmopolitan.fr/comment-arreter-la-surconsommation,2074631.asp">4 astuces pour arrêter la surconsommation et mieux gérer ses dépenses</a></li>
+                    <li><a href="https://www.linfodurable.fr/conso/black-friday-quelles-sont-les-alternatives-responsables-35453">Black Friday : quelles sont les alternatives responsables ?</a></li>
+                    <li><a href="https://www.tf1info.fr/environnement-ecologie/black-friday-25-novembre-un-vendredi-noir-de-promotions-pour-l-environnement-et-les-droits-humains-2239703.html">Black Friday : un vendredi noir pour l'environnement et les droits humains</a></li>
+                    
+                    `;
+                } else {
+                    bouton.textContent = "Cliquez pour avoir les informations scientifiques";
+                }
+            });
+        });
           </script>
         </div>
         <div class="texts">
@@ -109,12 +140,15 @@
               collection ne servirait à rien d’autre qu’à encombrer sa fusée.
               Alors elle s’en alla.
             </p>
+            <button id="links">
+              Cliquez pour avoir les informations scientifiques
+            </button>
           </div>
         </div>
       </div>
       <div class="persos">
-        <img class="princesse" src="/assets/image/info-planete/princesse.gif" alt="Personnage">
-        <img class="ellipse" src="/assets/image/info-planete/planete1.svg" alt="" />
+        <img class="princesse" src="assets/image/info-planete/princesse.gif" alt="Personnage">
+        <img class="ellipse" src="assets/image/planete/1.svg" alt="" />
       </div>
 
 
