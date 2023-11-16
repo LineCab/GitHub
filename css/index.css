@@ -80,7 +80,7 @@ body{
 }
 .bottom-box{
     position: absolute;
-    top: 65vh;
+    top: 68vh;
 }
 .title-galaxy{
     color: #FFF;
@@ -168,7 +168,7 @@ body{
 .galaxy-slide {
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 50px;
     flex-direction: column;
     flex: 0 0 100%;
 }
