@@ -4,7 +4,7 @@ body {
   justify-content: space-between;
   width: 99%;
   height: fit-content;
-  background: url(assets/image/info-planete/background.svg);
+  background: url(/assets/image/background.svg);
   background-position: contain;
   color: #fff;
   font-family: Lexend, sans-serif;
@@ -31,7 +31,7 @@ body {
   position: absolute;
   left: 40%;
   top: 68%;
-  content: url(assets/image/info-planete/stars.svg);
+  content: url(/assets/image/info-planete/stars.svg);
 }
 h1 {
   font-family: Inter;
