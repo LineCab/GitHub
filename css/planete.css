@@ -92,6 +92,28 @@ a {
   display: flex;
   gap: 10px;
   align-items: center;
+  font-family: Lexend;
+  font-weight: 300;
+  font-size: 22px;
+  color: #FFF;
+  position: absolute;
+  left: 7vw;
+  top: 60px;
+}
+.return:hover {
+  opacity: 0.8;
+}
+.return img {
+  height: 22px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px){
+  .return {
+      font-size: 18px;
+  }
+  .return img {
+      height: 18px;
+  }
 }
 .texts {
   display: flex;
@@ -186,6 +208,7 @@ a {
   position: absolute;
   top: 0px;
   width: 200px;
+  height: 286px;
   position: relative;
   z-index: 99;
   margin-top: 200px;
@@ -367,9 +390,6 @@ ul{
     padding-top: 50px;
     padding-right: 200px;
   }
-  .return{
-    padding-left: 200px;
-  }
   .ellipse {
     width: 600px;
     margin-top: 800px;
@@ -412,9 +432,7 @@ ul{
     margin: 0 auto;
     width: 175px;
   }
-  .return{
-    padding-left: 7px;
-  }
+
   .princesse{
     display: none;
   }
