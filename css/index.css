@@ -231,7 +231,7 @@ body{
     height: 7vh;
     text-align: center;
     flex-direction: column;
-    background-image: url('../assets/image/fond.svg');
+    background-image: url('/assets/image/background.svg');
 }
 
 .footer a{
