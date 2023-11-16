@@ -91,6 +91,25 @@ body{
     grid-area: 3 / 22 / 4 / 22;
     height: fit-content;
 }
+.planete5 {
+    grid-area: 7 / 3 / 7 / 3;
+    height: fit-content;
+}
+
+.planete6 {
+    grid-area: 1 / 20 / 1 / 20;
+    height: fit-content;
+}
+
+.planete7 {
+    grid-area: 8 / 15 / 9 / 15;
+    height: fit-content;
+}
+
+.planete8 {
+    grid-area: 1 / 9 / 1 / 9;
+    height: fit-content;
+}
 
 .planete1 img{
     max-width:180px;
@@ -102,6 +121,18 @@ body{
     max-width: 150px;
 }
 .planete4 img{
+    max-width: 200px;
+}
+.planete5 img{
+    max-width:180px;
+}
+.planete6 img{
+    max-width: 90px;
+}
+.planete7 img{
+    max-width: 150px;
+}
+.planete8 img{
     max-width: 200px;
 }
 .hover-planete {
@@ -264,6 +295,25 @@ body{
     .planete4 {
         grid-area: 3 / 6 / 3 / 6;
     }
+
+    .planete5 {
+        margin-left: 5vw;
+        grid-area: 1 / auto / 1 / auto;
+    }
+    
+    .planete6 {
+        margin-left: 5vw;
+        grid-area: 3 / 2 / 3 / 2;
+    }
+    
+    .planete7 {
+        margin-top: -100px;
+        grid-area: 2 / 5 / 2 / 5;
+    }
+    
+    .planete8 {
+        grid-area: 3 / 6 / 3 / 6;
+    }
     
     .planete1 img{
         max-width:130px;
@@ -275,6 +325,18 @@ body{
         max-width: 80px;
     }
     .planete4 img{
+        max-width: 120px;
+    }
+    .planete5 img{
+        max-width:130px;
+    }
+    .planete6 img{
+        max-width: 110px;
+    }
+    .planete7 img{
+        max-width: 80px;
+    }
+    .planete8 img{
         max-width: 120px;
     }
     .hover-planete {
@@ -365,6 +427,23 @@ body{
     .planete4 {
         grid-area: 4 / 5 / 4 / 5;
     }
+    .planete5 {
+        margin-left: 5vw;
+        grid-area: 1 / auto / 1 / auto;
+    }
+    
+    .planete6 {
+        margin-left: 5vw;
+        grid-area: 3 / 2 / 3 / 2;
+    }
+    
+    .planete7 {
+        grid-area: 2 / 5 / 2 / 5;
+    }
+    
+    .planete8 {
+        grid-area: 4 / 5 / 4 / 5;
+    }
     
     .planete1 img{
         max-width:100px;
@@ -376,6 +455,18 @@ body{
         max-width: 50px;
     }
     .planete4 img{
+        max-width: 80px;
+    }
+    .planete5 img{
+        max-width:100px;
+    }
+    .planete6 img{
+        max-width: 100px;
+    }
+    .planete7 img{
+        max-width: 50px;
+    }
+    .planete8 img{
         max-width: 80px;
     }
     .hover-planete {
