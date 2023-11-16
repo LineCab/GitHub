@@ -8,7 +8,7 @@ body{
 
 .galaxy-slide{
     width: 100vw;
-    height: 95vh; 
+
     background-image: url('../assets/image/background.svg');
 }
 .box-text{
@@ -136,7 +136,7 @@ body{
     width: 100vw;
     height: 5vh;
     justify-content: center;
-    background-image: url('../assets/image/fond.svg');
+    background-image: url('../assets/image/background.svg');
 }
 
 .bullet span {
@@ -175,6 +175,7 @@ body{
 .footer{
     display: flex;
     position: absolute;
+    font-family: Lexend;
     margin-top: 5vh;
     width: 100vw;
     height: 7vh;
@@ -195,100 +196,202 @@ body{
     color: #FFF;
 }
 
-@media screen and (min-width: 801px) and (max-width: 1000px){
 
-    .planetes {
-        grid-template-columns: repeat(25, 3vw);
-        grid-template-rows: repeat(10, 3vw);
-    }
 
-    .planete1 img{
-        max-width:160px;
-    }
-    .planete2 img{
-        max-width: 170px;
-    }
-    .planete3 img{
-        max-width: 120px;
-    }
-    .planete4 img{
-        max-width: 170px;
-    }
-    
-    .assis{
-        margin-top: -100px;
-        width: 110px;
-    }
-    
-    .box-text{
-        padding: 30px 30px;
-        width: 80vw;
-    }
-    
-}
-
-@media screen and (min-width: 551px) and (max-width: 800px){
-
-    .planetes {
-        grid-template-columns: repeat(25, 3vw);
-        grid-template-rows: repeat(10, 4vw);
-    }
-
-    .planete1 img{
-        max-width:130px;
-    }
-    .planete2 img{
-        max-width: 140px;
-    }
-    .planete3 img{
-        max-width: 90px;
-    }
-    .planete4 img{
-        max-width: 140px;
-    }
-    
-    .assis{
-        margin-top: -80px;
-        width: 90px;
-    }
-    
-    .box-text{
-        padding: 20px 20px;
-        width: 90vw;
-    }
-
-    .galaxy {
+@media screen and (min-width: 551px) and (max-width: 1000px){
+    .galaxy{
         height: auto;
     }
+    .galaxy-slide{
+        width: 100vw;
+        height: auto;
+        padding-bottom: 120px;
+    }
+    .box-text{
+        width: 70vw;
+        padding: 35px 25px;
+    }
+    .assis{
+        margin-top: -80px;
+        right: 3vw;
+        width: 90px;
+    }
+    .bottom-box{
+        top: 70vh;
+    }
+    .title-galaxy{
+        font-size: 20px;
+    }
+    .text-galaxy{
+        font-size: 14px;
+        margin-top: 14px;
+    }
+    .planetes {
+        max-width: 100vw;
+        grid-template-columns: repeat(4, 10vw);
+        grid-template-rows: repeat(6, 0.5fr);
+        padding-top: 0px;
+    }
+    .planete1 {
+        margin-left: 5vw;
+        grid-area: 1 / auto / 1 / auto;
+    }
     
-}
-
-@media screen and (min-width: 0px) and (max-width: 550px){
-
+    .planete2 {
+        margin-left: 5vw;
+        grid-area: 3 / 2 / 3 / 2;
+    }
+    
+    .planete3 {
+        margin-top: -100px;
+        grid-area: 2 / 5 / 2 / 5;
+    }
+    
+    .planete4 {
+        grid-area: 3 / 6 / 3 / 6;
+    }
+    
     .planete1 img{
-        max-width:80px;
+        max-width:130px;
     }
     .planete2 img{
         max-width: 110px;
     }
     .planete3 img{
-        max-width: 60px;
+        max-width: 80px;
     }
     .planete4 img{
-        max-width:110px;
+        max-width: 120px;
+    }
+    .hover-planete {
+        display: block;
+        font-size: 14px;
+        width: 100px;        
     }
 
-    .img-planete:hover {
-        display: block;
+    .galaxy-slide {
+        padding-top: 25px;
     }
     
+    .bullet {
+        width: 100vw;
+        height: 5vh;
+    }
+    
+    .bullet span {
+        height: 15px;
+        width:15px;
+    }
+    .audio{
+        right: 7vw;
+        top: 32px;
+    }
+    .audio svg{
+       scale: 1.5;
+    }
+    
+    .footer{
+        margin-top: 5vh;
+        width: 100vw;
+        height: 7vh;
+    }
+
+}
+@media screen and (min-width: 0px) and (max-width: 550px){
+    .galaxy{
+        height: auto;
+    }
+    .galaxy-slide{
+        width: 100vw;
+        height: auto;
+        padding-bottom: 360px;
+    }
     .box-text{
-        padding: 5px 5px;
-        width: 90vw;
+        width: 70vw;
+        padding: 35px 25px;
+    }
+    .assis{
+        margin-top: -80px;
+        right: 3vw;
+        width: 90px;
+    }
+    .bottom-box{
+        top: 80vh;
+    }
+    .title-galaxy{
+        font-size: 20px;
+    }
+    .text-galaxy{
+        font-size: 14px;
+        margin-top: 14px;
+    }
+    .planetes {
+        max-width: 100vw;
+        grid-template-columns: repeat(4, 10vw);
+        grid-template-rows: repeat(6, 0.5fr);
+        padding-top: 0px;
+    }
+    .planete1 {
+        margin-left: 5vw;
+        grid-area: 1 / auto / 1 / auto;
     }
     
-    .assis{
-        margin-top: -60px;
-        width: 70px;
+    .planete2 {
+        margin-left: 5vw;
+        grid-area: 3 / 2 / 3 / 2;
     }
+    
+    .planete3 {
+        grid-area: 2 / 5 / 2 / 5;
+    }
+    
+    .planete4 {
+        grid-area: 4 / 5 / 4 / 5;
+    }
+    
+    .planete1 img{
+        max-width:100px;
+    }
+    .planete2 img{
+        max-width: 100px;
+    }
+    .planete3 img{
+        max-width: 50px;
+    }
+    .planete4 img{
+        max-width: 80px;
+    }
+    .hover-planete {
+        display: block;
+        font-size: 14px;
+        width: 100px;        
+    }
+
+    .galaxy-slide {
+        padding-top: 25px;
+    }
+    
+    .bullet {
+        width: 100vw;
+        height: 5vh;
+    }
+    
+    .bullet span {
+        height: 15px;
+        width:15px;
+    }
+    .audio{
+        right: 7vw;
+        top: 32px;
+    }
+    .audio svg{
+       scale: 1.5;
+    }
+    
+    .footer{
+        margin-top: 5vh;
+        width: 100vw;
+        height: 7vh;
+    }
+
 }
