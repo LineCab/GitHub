@@ -147,7 +147,7 @@ body{
     margin-top: 12px;
     width: 200px;
     position: relative;
-    
+    z-index: 99;
 }
 
 /* Show the text when hovering over the corresponding planet */
