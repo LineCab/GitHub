@@ -302,8 +302,10 @@ nav{
   .content {
     width: 600px;
   }
-  .ellipse{
-    display: none;
+  .ellipse {
+    width: 600px;
+    margin-top: 600px;
+    margin-left: 1000px;
   }
   .princesse{
     display: none;
@@ -338,8 +340,10 @@ nav{
   .return{
     padding-left: 200px;
   }
-  .ellipse{
-    display: none;
+  .ellipse {
+    width: 600px;
+    margin-top: 800px;
+    margin-left: 1000px;
   }
   .princesse{
     display: none;
@@ -350,7 +354,7 @@ nav{
   }
 }
 
-@media screen and (max-width: 599px) and (max-height: 999px){
+@media screen and (max-width: 599px) {
   body{
     overflow-x: hidden;
   }
@@ -381,11 +385,13 @@ nav{
   .return{
     padding-left: 7px;
   }
-  .ellipse{
-    display: none;
-  }
   .princesse{
     display: none;
+  }
+  .ellipse {
+    width: 700px;
+    margin-top: 700px;
+    margin-left: 700px;
   }
   .rond{
     top: 130px;
