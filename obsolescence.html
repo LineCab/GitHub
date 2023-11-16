@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/planete.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Planète 1</title>
+    <script
+      src="https://kit.fontawesome.com/3e029111f7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+      <div class="content">
+        <div class="title">
+          <h1>Planète Obsolescence</h1>
+        </div>
+        <div class="commands">
+          <a href="index.html">
+            <div class="return">
+              <img src="assets/image/info-planete/return.svg" alt="" />
+              <p>Retour</p>
+            </div>
+          </a>
+          <div class="music-player">
+            <div class="barre">
+              <audio id="song">
+                <source src="/assets/son/musique.mp3" type="audio/mpeg" />
+              </audio>
+              <input type="range" value="0" id="progress" />
+            </div>
+
+            <div class="controls">
+              <div onclick="playPause()">
+                <i class="fa-solid fa-play" id="ctrlIcon"></i>
+              </div>
+            </div>
+          </div>
+          <script>
+            let progress = document.getElementById("progress");
+            let song = document.getElementById("song");
+            let ctrlIcon = document.getElementById("ctrlIcon");
+
+            song.onloadedmetadata = function () {
+              progress.max = song.duration;
+              progress.value = song.currentTime;
+            };
+
+            function playPause() {
+              if (ctrlIcon.classList.contains("fa-pause")) {
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+              } else {
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+              }
+            }
+
+            if (song.play()) {
+              setInterval(() => {
+                progress.value = song.currentTime;
+              }, 500);
+            }
+
+            progress.onchange = function () {
+              song.play();
+              song.currentTime = progress.value;
+              ctrlIcon.classList.add("fa-pause");
+              ctrlIcon.classList.remove("fa-play");
+            };
+          </script>
+        </div>
+        <div class="texts">
+          <div class="paragraph">
+            <p>
+                Cette planète était ondulée. De loin, on y voyait des milliers de collines. La petite astronaute était toute excitée, c’était comme ci elle allait dans un parc d’attraction.
+            </p>
+            <p>
+                Mais lorsqu’elle atterrie, elle découvrait un autre monde. Ces collines n’étaient pas habillées de sa verdure. En réalité, c’était des tas d’objets divers : des machines, des jouets, et même des vêtements. Elle se demandait pourquoi ils étaient là, entassés et à l’abandon ? Pourquoi n’étaient ils pas au chaud dans leurs maisons ? Elle avait essayé de toutes ses forces de faire fonctionner une bouilloir mais il ne s’allumait plus. Elle avait recommencé avec une télévision mais c’était pareil, elle ne fonctionnait plus. 
+            </p>
+            <p></p>
+            <p>
+                Elle voulait se divertir avec des objets qui fonctionneraient toute la vie. Ne pas avoir à les jeter après les avoir un peu utiliser. Alors, elle s’en alla.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="persos">
+        <img class="princesse" src="/assets/image/info-planete/princesse.gif" alt="Personnage">
+        <img class="ellipse" src="/assets/image/info-planete/planete1.svg" alt="" />
+      </div>
+
+
+      <div class="container">
+        <img class="man" src="assets/image/info-planete/man.svg" alt="" />
+        <img class="plante" src="assets/image/info-planete/plante.svg" alt="" />
+        <img class="rond" src="assets/image/info-planete/rond.svg" alt="" />
+      </div>
+  </body>
+</html>
