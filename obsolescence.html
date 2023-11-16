@@ -14,120 +14,121 @@
     ></script>
   </head>
   <body>
-      <div class="content">
-        <div class="title">
-          <h1>Planète Obsolamma</h1>
-        </div>
-        <div class="commands">
-            <a class="return" href="index.html">
-                <img src="assets/image/info-planete/return.svg" alt="" />
-                <p>Retour</p>
-            </a>
-          <div class="music-player">
-            <div class="barre">
-              <audio id="song">
-                <source src="/assets/son/histoire2.mp3" type="audio/mpeg" />
-              </audio>
-              <input type="range" value="0" id="progress" />
+        <div class="content">
+            <div class="title">
+            <h1>Planète Obsolamma</h1>
             </div>
+            <div class="commands">
+                <a class="return" href="index.html">
+                    <img src="assets/image/info-planete/return.svg" alt="" />
+                    <p>Retour</p>
+                </a>
+                <div class="music-player">
+                    <div class="barre">
+                    <audio id="song">
+                        <source src="/assets/son/histoire2.mp3" type="audio/mpeg" />
+                    </audio>
+                    <input type="range" value="0" id="progress" />
+                    </div>
 
-            <div class="controls">
-              <div onclick="playPause()">
-                <i class="fa-solid fa-play" id="ctrlIcon"></i>
-              </div>
-            </div>
-          </div>
-          <script>
-            let progress = document.getElementById("progress");
-            let song = document.getElementById("song");
-            let ctrlIcon = document.getElementById("ctrlIcon");
+                    <div class="controls">
+                    <div onclick="playPause()">
+                        <i class="fa-solid fa-play" id="ctrlIcon"></i>
+                    </div>
+                    </div>
+                </div>
+                <script>
+                    let progress = document.getElementById("progress");
+                    let song = document.getElementById("song");
+                    let ctrlIcon = document.getElementById("ctrlIcon");
 
-            song.onloadedmetadata = function () {
-                progress.max = song.duration;
-                progress.value = song.currentTime;
-            };
+                    song.onloadedmetadata = function () {
+                        progress.max = song.duration;
+                        progress.value = song.currentTime;
+                    };
 
-            function playPause() {
-                if (ctrlIcon.classList.contains("fa-pause")) {
-                    song.pause();
-                    ctrlIcon.classList.remove("fa-pause");
-                    ctrlIcon.classList.add("fa-play");
-                } else {
+                    function playPause() {
+                        if (ctrlIcon.classList.contains("fa-pause")) {
+                            song.pause();
+                            ctrlIcon.classList.remove("fa-pause");
+                            ctrlIcon.classList.add("fa-play");
+                        } else {
+                            song.play();
+                            ctrlIcon.classList.add("fa-pause");
+                            ctrlIcon.classList.remove("fa-play");
+                            
+                            // Utiliser setInterval pour mettre à jour la barre d'avancement
+                            setInterval(() => {
+                                progress.value = song.currentTime;
+                            }, 500);
+                        }
+                    }
+
+                    progress.onchange = function () {
+                        song.currentTime = progress.value;
+                    };
+
+
+                    progress.onchange = function () {
                     song.play();
+                    song.currentTime = progress.value;
                     ctrlIcon.classList.add("fa-pause");
                     ctrlIcon.classList.remove("fa-play");
+                    };
                     
-                    // Utiliser setInterval pour mettre à jour la barre d'avancement
-                    setInterval(() => {
-                        progress.value = song.currentTime;
-                    }, 500);
-                }
-            }
+                    // bouton pour afficher les informations scientifiques
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var bouton = document.getElementById("links");
 
-            progress.onchange = function () {
-                song.currentTime = progress.value;
-            };
-
-
-            progress.onchange = function () {
-              song.play();
-              song.currentTime = progress.value;
-              ctrlIcon.classList.add("fa-pause");
-              ctrlIcon.classList.remove("fa-play");
-            };
-                      // bouton pour afficher les informations scientifiques
-          document.addEventListener("DOMContentLoaded", function () {
-            var bouton = document.getElementById("links");
-
-            bouton.addEventListener("click", function () {
-                if (bouton.textContent === "Cliquez pour en savoir plus") {
-                    bouton.innerHTML = "";
-                    bouton.innerHTML += `<head>
-                    <style>
-                      ul{
-                        list-style: none;
-                        decoration: none;
-                      }
-                      li{
-                        text-align: left;
-                        font-size: 20px;
-                        decoration: none;
-                        margin-bottom: 10px;
-                      }
-                      </style></head>`;
-                    bouton.innerHTML += `<li><a href="https://naturefrance.fr/surexploitation-des-ressources" target="_blank">Sobriété numérique : comment lutter contre l’obsolescence programmée ?</a></li>
-                    <li><a href="https://www.conservation-nature.fr/ecologie/consequences-surexploitation-biodiversite/" target="_blank">Numérique : les propositions pour lutter contre l’obsolescence logicielle</a></li>
-                                        
-                    `;
-                } else {
-                    bouton.textContent = "Cliquez pour en savoir plus";
-                }
-            });
-        });
-          </script>
+                        bouton.addEventListener("click", function () {
+                            if (bouton.textContent === "Cliquez pour en savoir plus") {
+                                bouton.innerHTML = "";
+                                bouton.innerHTML += `<head>
+                                <style>
+                                ul{
+                                    list-style: none;
+                                    decoration: none;
+                                }
+                                li{
+                                    text-align: left;
+                                    font-size: 20px;
+                                    decoration: none;
+                                    margin-bottom: 10px;
+                                }
+                                </style></head>`;
+                                bouton.innerHTML += `<li><a href="https://naturefrance.fr/surexploitation-des-ressources" target="_blank">Sobriété numérique : comment lutter contre l’obsolescence programmée ?</a></li>
+                                <li><a href="https://www.conservation-nature.fr/ecologie/consequences-surexploitation-biodiversite/" target="_blank">Numérique : les propositions pour lutter contre l’obsolescence logicielle</a></li>
+                                                    
+                                `;
+                            } else {
+                                bouton.textContent = "Cliquez pour en savoir plus";
+                            }
+                        });
+                    });
+                </script>
+            </div>
+            <div class="texts">
+                <div class="paragraph">
+                    <p>
+                        Cette planète était ondulée. De loin, on y voyait des milliers de collines. La petite astronaute était toute excitée, c’était comme ci elle allait dans un parc d’attraction.
+                    </p>
+                    <p>
+                        Mais lorsqu’elle atterrit, elle découvrait un autre monde. Ces collines n’étaient pas habillées de sa verdure. En réalité, c’était des tas d’objets divers : des machines, des jouets, et même des vêtements. Elle se demandait pourquoi ils étaient là, entassés et à l’abandon ? Pourquoi n’étaient ils pas au chaud dans leurs maisons ? Elle avait essayé de toutes ses forces de faire fonctionner une bouilloir mais il ne s’allumait plus. Elle avait recommencé avec une télévision mais c’était pareil, elle ne fonctionnait plus. 
+                    </p>
+                    <p></p>
+                    <p>
+                        Elle voulait se divertir avec des objets qui fonctionneraient toute la vie. Ne pas avoir à les jeter après les avoir un peu utiliser. Alors, elle s’en alla.
+                    </p>
+                    <button id="links">
+                    Cliquez pour en savoir plus
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="texts">
-          <div class="paragraph">
-            <p>
-                Cette planète était ondulée. De loin, on y voyait des milliers de collines. La petite astronaute était toute excitée, c’était comme ci elle allait dans un parc d’attraction.
-            </p>
-            <p>
-                Mais lorsqu’elle atterrit, elle découvrait un autre monde. Ces collines n’étaient pas habillées de sa verdure. En réalité, c’était des tas d’objets divers : des machines, des jouets, et même des vêtements. Elle se demandait pourquoi ils étaient là, entassés et à l’abandon ? Pourquoi n’étaient ils pas au chaud dans leurs maisons ? Elle avait essayé de toutes ses forces de faire fonctionner une bouilloir mais il ne s’allumait plus. Elle avait recommencé avec une télévision mais c’était pareil, elle ne fonctionnait plus. 
-            </p>
-            <p></p>
-            <p>
-                Elle voulait se divertir avec des objets qui fonctionneraient toute la vie. Ne pas avoir à les jeter après les avoir un peu utiliser. Alors, elle s’en alla.
-            </p>
-            <button id="links">
-              Cliquez pour en savoir plus
-            </button>
-          </div>
+        <div class="persos">
+            <img class="princesse" src="assets/image/info-planete/princesse.gif" alt="Personnage">
+            <img class="ellipse obsolescence" src="/assets/image/planete/page-info/planete-obsolescence.svg" alt="" />
         </div>
-      </div>
-      <div class="persos">
-        <img class="princesse" src="assets/image/info-planete/princesse.gif" alt="Personnage">
-        <img class="ellipse obsolescence" src="/assets/image/planete/page-info/planete-obsolescence.svg" alt="" />
-      </div>
 
 
       <div class="container">

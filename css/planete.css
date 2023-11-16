@@ -52,7 +52,7 @@ h1 {
   font-family: Lexend, sans-serif;
   font-weight: 400;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
 }
 a {
   color: #fff;
