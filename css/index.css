@@ -213,6 +213,9 @@ body{
     .galaxy{
         height: auto;
     }
+    #custom-cursor {
+      display: none;
+    }
     .galaxy-slide{
         width: 100vw;
         height: auto;
@@ -312,6 +315,9 @@ body{
     .galaxy{
         height: auto;
     }
+    #custom-cursor {
+        display: none;
+      }
     .galaxy-slide{
         width: 100vw;
         height: auto;
