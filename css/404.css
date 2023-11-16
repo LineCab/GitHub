@@ -50,7 +50,8 @@
 }
 .background{
     width: 100vw;
-    height: 100vh; 
+    min-height: 100vh;
+    height: 600px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,12 +69,57 @@
 }
 .text-404{
     color: #FFF;
-text-align: center;
-font-family: Lexend;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-width: 70vw;
-margin-top: 8px;
+    text-align: center;
+    font-family: Lexend;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 70vw;
+    margin-top: 8px;
+}
+.img-404{
+    width: 15vw;
+    min-width: 150px;
+}
+a{text-decoration: none;}
+.return {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: Lexend;
+    font-weight: 300;
+    font-size: 22px;
+    color: #FFF;
+    position: absolute;
+    left: 7vw;
+    top: 60px;
+}
+.return:hover {
+    opacity: 0.8;
+}
+.return img {
+    height: 22px;
+}
+@media screen and (min-width: 551px) and (max-width: 800px){
+    .title-404{
+        font-size: 32px;
+    }
+    .text-404{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 550px){
+    .title-404{
+        font-size: 28px;
+    }
+    .text-404{
+        font-size: 17px;
+    }
+    .return {
+        font-size: 18px;
+    }
+    .return img {
+        height: 18px;
+    }
 }
