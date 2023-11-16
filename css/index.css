@@ -76,7 +76,7 @@ body{overflow-x: hidden;}
 }
 .bottom-box{
     position: absolute;
-    bottom: 50px;
+    top: 65vh;
 }
 .title-galaxy{
     color: #FFF;
