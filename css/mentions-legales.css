@@ -1,0 +1,53 @@
+body{
+    background-image: url('../assets/image/background.svg');
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFF;
+    margin-top: 10px;
+}
+
+p{
+    font-size: 18px;
+    color: #FFF;
+    margin: 15px 0;
+    line-height: normal;
+}
+
+.return {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: Lexend;
+    font-weight: 300;
+    font-size: 22px;
+    color: #FFF;
+    position: absolute;
+    left: 7vw;
+    top: 60px;
+}
+.return:hover {
+    opacity: 0.8;
+}
+.return img {
+    height: 22px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    max-width: 60vw;
+    margin: 170px auto 50px auto;
+}

@@ -52,7 +52,11 @@
 a{
     text-decoration: none;
 }
-body{overflow-x: hidden;}
+
+body{
+    overflow-x: hidden;
+}
+
 .galaxy-slide{
     width: 100vw;
     height: 95vh; 
@@ -217,6 +221,29 @@ body{overflow-x: hidden;}
 }
 .audio svg path{
     fill: #FFF;
+}
+
+.footer{
+    display: flex;
+    position: absolute;
+    margin-top: 5vh;
+    width: 100vw;
+    height: 7vh;
+    text-align: center;
+    flex-direction: column;
+    background-image: url('../assets/image/fond.svg');
+}
+
+.footer a{
+    color: #FFF;
+    margin-bottom: 10px;
+}
+.footer a:hover{
+    opacity: 0.8;
+}
+
+.footer p{
+    color: #FFF;
 }
 
 @media screen and (min-width: 801px) and (max-width: 1000px){
